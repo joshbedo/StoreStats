@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>StoreStats - A real-time way of tracking your customers interactions</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/screen.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <script data-main="js/app" src="js/lib/require.min.js"></script>
+        <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="container app">
+        	<aside class="sidebar">
+        		<h1 class="logo">
+        			<a href="#">Store<strong>Stats</strong></a>
+        		</h1>
+        		<nav class="main-nav">
+        			<ul>
+        				<li><a href="#"><i class="icon-home"></i> Home</a></li>
+        				<li class="active">
+        					<a href="#"><i class="icon-bar-chart"></i> Stats</a>
+        					<!--<ul>
+        						<li><a href="#">Rundown</a></li>
+        						<li><a href="#"></a></li>
+        						<li><a href="#"></a></li>
+        						<li><a href="#"></a></li>
+        					</ul>-->
+        				</li>
+        				<li><a href="#"><i class="icon-shopping-cart"></i> Products</a></li>
+        				<li><a href="#"><i class="icon-group"></i> Customers</a></li>
+        			</ul>
+        		</nav>
+        	</aside>
+        	<div class="main">
+        		<header class="header">
+        			<form action="">
+        				<input type="search" placeholder="Search customers or products"/>
+        			</form>
+        			<nav class="nav-settings">
+        				<ul>
+        					<li><a href="#">Josh Bedo</a></li>
+        					<li><a href="#"><i class="icon-gear"></i></a></li>
+        				</ul>
+        			</nav>
+        			<!-- this clear shouldnt be needed with flexbox -->
+        			<div class="clear"></div>
+        		</header>
+        		<div class="container">
+			      <section class="message">
+			        <h2><span class="icon icon-star-large"></span> The brand new season of Top Gear <span class="icon icon-reply-large"></span><span class="icon icon-delete-large"></span></h2>
+			        <div class="meta-data">
+			          <p>
+			            <img src="http://placehold.it/40x40" class="avatar" alt="" />
+			            Jeremy Clarkson to <span class="user">me</span>
+			            <span class="date">July 15, 2013</span>
+			          </p>
+			        </div>
+			        <div class="body">
+			          <p>Hi Greg,</p>
+			          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam modi possimus dignissimos maxime ipsa unde voluptatum consectetur harum debitis dolorum quas quibusdam vero iusto ducimus blanditiis. Enim autem illo praesentium est quis ab voluptate sequi quia magnam deleniti vero dicta iste. Harum velit asperiores expedita inventore error nulla eius nostrum voluptas aspernatur at quia eaque ipsa deserunt quas doloribus totam incidunt mollitia iure! Libero laudantium nobis necessitatibus veniam autem molestias distinctio voluptas quos aliquam vitae. Consequuntur adipisci natus hic sed rerum dolore cumque numquam illum rem at quaerat reprehenderit iste quis maiores fuga voluptates delectus suscipit dicta nulla itaque placeat.</p>
+			          <p>Cheers</p>
+			        </div>
+                    <a href="#" class="btn btn-primary">Buy Me</a>
+			        <div class="action">
+			          <ul class="options">
+			            <li><a href="#" class="active">Answering</a></li>
+			            <li><a href="#">Forward</a></li>
+			            <div class="clr"></div>
+			          </ul>
+			          <div class="textarea">
+			            <textarea name="r">Hello Jeremy,
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit qui impedit magni fuga velit nobis quas fugit odio voluptas voluptates odit animi quos nam dolorem harum molestiae culpa sint rem ad esse laboriosam vero quod molestias porro ea dolores eligendi!
+			            </textarea>
+			            <div class="fileupload container">
+			              <span class="fileinfo">My file enclosed.pdf</span>
+			              <div class="progress">
+			                <div class="bar">65%</div>
+			              </div>
+			            </div>
+			          </div>
+			        </div>
+			      </section>
+        		</div>
+        	</div>
+        </div>
+
+
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>-->
+        <!--<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type="text/javascript">
+            var socket = io.connect('http://localhost:3000');
+
+            $(function(){
+                $('.btn').click(function(ev){
+                    socket.emit('buy', { product: 'cool-shirt' });
+                    ev.preventDefault();
+                })
+            });
+
+          socket.on('purchase', function (data) {
+            console.log(data);
+          });
+
+          socket.on('leave', function (data) {
+            console.log(data);
+          });
+        </script>-->
+
+    </body>
+</html>
