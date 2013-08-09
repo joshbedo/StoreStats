@@ -15,5 +15,5 @@ Require.js / Optimization tools
 Highcharts.js
 Handlebars.js
 
-soon to be integrated with mongodb
+live example coming soon on appfog.com integrated with mongodb 
 
