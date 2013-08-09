@@ -9,7 +9,6 @@ USING:
 * node.js
 * socket.io
 * express.js
-
 * SASS / Compass
 * CSS3 flexbox
 * Require.js / Optimization tools
