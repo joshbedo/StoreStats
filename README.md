@@ -14,7 +14,7 @@ Stack Used:
 * Require.js / Optimization tools
 * AngularJS
 * Highcharts.js
-* ~~Handlebars.js~~
+* <del>Handlebars.js</del> ( decided to have AngularJS handle templating )
 
 live example coming soon on appfog.com integrated with mongodb 
 
