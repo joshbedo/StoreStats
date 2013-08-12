@@ -1,5 +1,6 @@
 define(['angular', 'services'], function (angular) {
 	'use strict';
+	
 
 	return angular.module('myApp.controllers', ['myApp.services'])
 		// Sample controller where service is being used
@@ -15,5 +16,10 @@ define(['angular', 'services'], function (angular) {
 				// Furthermore we need to pass on the $scope as it's unique to this controller
 				$injector.invoke(myctrl2, this, {'$scope': $scope});
 			});
-		}]);
+		}])
+		.controller('mainController', ['$scope', '$injector', function($scope, $injector){
+			require(['controllers/mainController'], function(main){
+				$injector.invoke(main, this, {'$scope': $scope});
+			})
+		}])
 });

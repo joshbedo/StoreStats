@@ -1,8 +1,8 @@
 var express = require('express'),
 	app = express(),
-	server = require('http').createServer(app),
+	server = require('http').createServer(app);
 	io = require('socket.io').listen(server),
-	chatClients = new Object();
+  api = require('./api/api-endpoints');
 
 server.listen(3000);
 
@@ -17,11 +17,16 @@ app.get('/', function(req, res){
 	res.sendfile(__dirname + '/public/index.html');
 });
 
+// API ENDPOINTS
+app.get('/api/customers/:id', api.findById);
+app.get('/api/customers', api.findAll);
+
+
 // sets the log level of socket.io, with
 // log level 2 we wont see all the heartbits
 // of each socket but only the handshakes and
 // disconnections
-io.set('log level', 2);
+//io.set('log level', 2);
 
 // setting the transports by order, if some client
 // is not supporting 'websockets' then the server will
@@ -33,7 +38,7 @@ io.set('log level', 2);
 // socket.io events, each connection goes through here
 // and each event is emited in the client.
 // I created a function to handle each event
-io.sockets.on('connection', function(socket){
+/*io.sockets.on('connection', function(socket){
 
   console.log('client has connected');
 
@@ -45,6 +50,6 @@ io.sockets.on('connection', function(socket){
   socket.on('disconnect', function(){
   	socket.broadcast.emit('leave');
   });
-});
+});*/
 
 console.log('server is running and listening to port %d', 3000);

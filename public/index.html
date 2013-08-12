@@ -17,7 +17,7 @@
         <script data-main="js/app" src="js/lib/require.min.js"></script>
         <!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>-->
     </head>
-    <body ng-init="names=['dave', 'dfdf', 'eee', 'eee']">
+    <body>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
@@ -29,9 +29,9 @@
         		</h1>
         		<nav class="main-nav">
         			<ul>
-        				<li><a href="#"><i class="icon-home"></i> Home</a></li>
-        				<li class="active">
-        					<a href="#"><i class="icon-bar-chart"></i> Stats</a>
+        				<li><a href="#/home"><i class="icon-home"></i> Home</a></li>
+        				<li>
+        					<a href="#/stats"><i class="icon-bar-chart"></i> Stats</a>
         					<!--<ul>
         						<li><a href="#">Rundown</a></li>
         						<li><a href="#"></a></li>
@@ -40,14 +40,14 @@
         					</ul>-->
         				</li>
         				<li><a href="#"><i class="icon-shopping-cart"></i> Products</a></li>
-        				<li><a href="#"><i class="icon-group"></i> Customers</a></li>
+        				<li class="active"><a href="#/customers"><i class="icon-group"></i> Customers</a></li>
         			</ul>
         		</nav>
         	</aside>
         	<div class="main">
         		<header class="header">
         			<form action="">
-        				<input type="search" placeholder="Search customers or products"/>
+        				<input type="search" ng-model="name" placeholder="Search customers or products"/>
         			</form>
         			<nav class="nav-settings">
         				<ul>
@@ -58,10 +58,11 @@
         			<!-- this clear shouldnt be needed with flexbox -->
         			<div class="clear"></div>
         		</header>
-        		<div class="container">
+        		<div ng-controller="mainController" class="container">
 			      <section class="message">
+                    <div class="body" ng-view></div>
 			        <!--<h2><span class="icon icon-star-large"></span> The brand new season of Top Gear <span class="icon icon-reply-large"></span><span class="icon icon-delete-large"></span></h2>-->
-			        <div class="meta-data">
+			        <!--<div class="meta-data">
 			          <p>
 			            <img src="http://placehold.it/40x40" class="avatar" alt="" />
 			            Jeremy Clarkson to <span class="user">me</span>
@@ -73,7 +74,7 @@
                         <li class="active"><a href="#/view1">View 1</a></li>
                         <li><a href="#/view2">View 2</a></li>
                     </ul>
-                    <div class="tab-content" ng-view></div>
+                    <div class="tab-content" ng-view="tab-data"></div>
 			        </div>
 			        <div class="action">
 			          <ul class="options">
@@ -92,7 +93,7 @@
 			              </div>
 			            </div>
 			          </div>
-			        </div>
+			        </div>-->
 			      </section>
         		</div>
         	</div>
