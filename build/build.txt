@@ -1,4 +1,12 @@
 
+css/bootstrap-responsive.min.css
+----------------
+css/bootstrap-responsive.min.css
+
+css/bootstrap.min.css
+----------------
+css/bootstrap.min.css
+
 css/font-awesome-ie7.min.css
 ----------------
 css/font-awesome-ie7.min.css
@@ -17,9 +25,16 @@ css/print.css
 
 css/screen.css
 ----------------
+css/bootstrap.min.css
 css/screen.css
 
 js/app.js
 ----------------
+js/lib/angular.min.js
+C:/Users/Josh/Desktop/StoreStats/public/js/services.js
+C:/Users/Josh/Desktop/StoreStats/public/js/filters.js
+C:/Users/Josh/Desktop/StoreStats/public/js/directives.js
+C:/Users/Josh/Desktop/StoreStats/public/js/controllers.js
 js/app/main.js
+C:/Users/Josh/Desktop/StoreStats/public/js/routes.js
 js/app.js

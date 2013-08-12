@@ -1,19 +1,13 @@
-define(["jquery", "socketio"], function($, io) {
-    //the jquery.alpha.js and jquery.beta.js plugins have been loaded.
- 		var socket = io.connect('http://localhost:3000');
+define(["jquery", "angular", "filters", "services", "directives", "controllers"], function($, angular, filters, services, directives, controllers) {
+'use strict';
+  
+  return angular.module('myApp', ['myApp.controllers', 'myApp.filters', 'myApp.services', 'myApp.directives']);
+  /*var App = {
+    init: function(txt){
+      console.log(txt);
+    }
+  }
 
-          socket.on('purchase', function (data) {
-            console.log(data);
-          });
+  return App;*/
 
-          socket.on('leave', function (data) {
-            console.log(data);
-          });
-
-            $(function(){
-                $('.btn').click(function(ev){
-                    socket.emit('buy', { product: 'cool-shirt' });
-                    ev.preventDefault();
-                })
-            });
 });

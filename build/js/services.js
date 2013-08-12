@@ -1,0 +1,1 @@
+define(["angular"],function(e){e.module("myApp.services",[]).value("version","0.1")});

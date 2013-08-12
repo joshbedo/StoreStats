@@ -5,6 +5,8 @@
 
 @import "compass/reset";
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(bootstrap.min.css);
+@import url(bootstrap.responsive.min.css);
 
 /* --- COLORS --- */
 $primary: #44c4e7;
@@ -64,6 +66,9 @@ a{ text-decoration:none; }
 				transition:background-color .3s ease;
 				&.active, &:hover{
 					background:lighten($secondary, 5%);;
+					i, a{
+						color:#FFF;
+					}
 				}
 				> a{
 					padding:20px 30px;
@@ -132,6 +137,7 @@ a{ text-decoration:none; }
 				border-radius:3px;
 				line-height:40px;
 				width:500px;
+				height:38px;
 				padding:0 10px;
 				outline:none;
 			}

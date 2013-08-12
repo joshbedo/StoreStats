@@ -1,10 +1,11 @@
 {
     "appDir": "../public",
-    "baseUrl": "../public/js/lib",
+    "baseUrl": "../public/js/",
     "dir": "../build",
     //Comment out the optimize line if you want
     //the code minified by UglifyJS
-    "optimize": "none",
+    //"optimize": "none",
+    "optimizeCss": "standard",
 
     // point to the shim config we set up before
     "mainConfigFile": "../public/js/app.js",

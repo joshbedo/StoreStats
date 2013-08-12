@@ -12,8 +12,9 @@ Stack Used:
 * SASS / Compass
 * CSS3 flexbox
 * Require.js / Optimization tools
+* AngularJS
 * Highcharts.js
-* Handlebars.js
+~~ * Handlebars.js ~~
 
 live example coming soon on appfog.com integrated with mongodb 
 

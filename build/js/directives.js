@@ -1,0 +1,1 @@
+define(["angular","services"],function(e,t){e.module("myApp.directives",["myApp.services"]).directive("appVersion",["version",function(e){return function(t,n,r){n.text(e)}}])});

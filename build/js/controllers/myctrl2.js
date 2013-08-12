@@ -1,0 +1,1 @@
+define([],function(){return["$scope","$http",function(e,t){e.welcomeMessage="hey this is myctrl2.js!",e.$apply()}]});

@@ -1,0 +1,1 @@
+define(["jquery","socketio","socketEvents"],function(e,t){function n(){var e=t.connect("http://localhost:3000");e.on("purchase",function(e){console.log(e)}),e.on("leave",function(e){console.log(e)})}});

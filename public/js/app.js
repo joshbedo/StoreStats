@@ -15,10 +15,11 @@
 requirejs(["jquery", "socketio", "app/main"]);*/
 
 requirejs.config({
-    "baseUrl": "../js/lib",
+    "baseUrl": "../js",
     "paths": {
-      "app": "../app",
+      "app": "app",
       "jquery": "//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min",
+      "angular": "lib/angular.min",
       "socketio": 'http://localhost:3000/socket.io/socket.io',
     },
 	"shim":{
@@ -26,11 +27,18 @@ requirejs.config({
 			dep: ["jquery"],
 			exports: "io"
 		},
-		"app/main": {
-			dep: ["jquery", "socketio"]
-		}
+    "angular": { exports: "angular" }
+		/*"app/main": {
+      exports: "app",
+			dep: ["jquery", "socketio", "angular"]
+		}*/
 	}
 });
 
 // Load the main app module to start the app
-requirejs(["jquery", "socketio", "app/main"]);
+requirejs(["jquery", "angular", "socketio", "app/main", "routes"], function(jquery, angular, io, app, routes){
+      'use strict';
+      //app.init('test module');
+
+      angular.bootstrap(document, [app["name"]]);
+    });
