@@ -1,6 +1,6 @@
 define(['angular', 'services'], function (angular) {
 	'use strict';
-	
+
 
 	return angular.module('myApp.controllers', ['myApp.services'])
 		// Sample controller where service is being used
