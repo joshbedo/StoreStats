@@ -49,7 +49,7 @@ app.get('/', function(req, res){
       }
     })
   }else{
-    res.sendfile(__dirname + '/public/login.html');
+    res.redirect('/login');
   }
 });
 
