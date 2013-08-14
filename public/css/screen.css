@@ -88,7 +88,7 @@ body {
 
 /* line 19, ../sass/screen.scss */
 a {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 
 /* line 21, ../sass/screen.scss */

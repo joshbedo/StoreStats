@@ -21,7 +21,6 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-
         <div class="container-flex app">
         	<aside class="sidebar">
         		<h1 class="logo">
@@ -29,9 +28,9 @@
         		</h1>
         		<nav class="main-nav">
         			<ul>
-        				<li><a href="#/home"><i class="icon-home"></i> Home</a></li>
+        				<li><a href="#/home" active-link="active"><i class="icon-home"></i> Home</a></li>
         				<li>
-        					<a href="#/stats"><i class="icon-bar-chart"></i> Stats</a>
+        					<a href="#/stats" active-link="active"><i class="icon-bar-chart"></i> Stats</a>
         					<!--<ul>
         						<li><a href="#">Rundown</a></li>
         						<li><a href="#"></a></li>
@@ -39,8 +38,8 @@
         						<li><a href="#"></a></li>
         					</ul>-->
         				</li>
-        				<li><a href="#"><i class="icon-shopping-cart"></i> Products</a></li>
-        				<li class="active"><a href="#/customers"><i class="icon-group"></i> Customers</a></li>
+        				<li><a href="#/products" active-link="active"><i class="icon-shopping-cart"></i> Products</a></li>
+        				<li><a href="#/customers" active-link="active"><i class="icon-group"></i> Customers</a></li>
         			</ul>
         		</nav>
         	</aside>
@@ -49,16 +48,19 @@
         			<form action="">
         				<input type="search" ng-model="name" placeholder="Search customers or products"/>
         			</form>
+                    <% if(user){ %>
         			<nav class="nav-settings">
         				<ul>
-        					<li><a href="#">Josh Bedo</a></li>
+        					<li>Welcome back,<a href="#"> <%=user%></a></li>
         					<li><a href="#"><i class="icon-gear"></i></a></li>
         				</ul>
         			</nav>
+                    <% } %>
+
         			<!-- this clear shouldnt be needed with flexbox -->
         			<div class="clear"></div>
         		</header>
-        		<div ng-controller="mainController" class="container">
+        		<div ng-controller="mainController" class="container-flex">
 			      <section class="message">
                     <div class="body" ng-view></div>
 			        <!--<h2><span class="icon icon-star-large"></span> The brand new season of Top Gear <span class="icon icon-reply-large"></span><span class="icon icon-delete-large"></span></h2>-->

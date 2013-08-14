@@ -23,11 +23,13 @@ exports.findAll = function(req, res){
 };
 
 //find by id
-exports.findById = function(req, res){
-	var id = parseInt(req.params.id);
-	db.collection('customers', function(err, collection){
-		collection.findOne({'id': id}, function(err, item){
-			res.jsonp(item);
-		})
-	});
+exports.findById = function(col){
+	return function(req, res){
+		var id = parseInt(req.params.id);
+		db.collection(col, function(err, collection){
+			collection.findOne({'id': id}, function(err, item){
+				res.jsonp(item);
+			})
+		});
+	}
 };

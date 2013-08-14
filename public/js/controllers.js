@@ -18,8 +18,13 @@ define(['angular', 'services'], function (angular) {
 			});
 		}])
 		.controller('mainController', ['$scope', '$injector', function($scope, $injector){
-			require(['controllers/mainController'], function(main){
-				$injector.invoke(main, this, {'$scope': $scope});
+			require(['controllers/mainController'], function(mainctrl){
+				$injector.invoke(mainctrl, this, {'$scope': $scope} );
+			})
+		}])
+		.controller('customersController', ['$scope', '$injector', function($scope, $injector){
+			require(['controllers/customersController'], function(customersctrl){
+				$injector.invoke(customersctrl, this, { '$scope': $scope } );
 			})
 		}])
 });

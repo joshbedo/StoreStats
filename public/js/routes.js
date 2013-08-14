@@ -1,11 +1,16 @@
 define(['angular', 'app/main'], function(angular, app) {
 	'use strict';
-	return app.config(['$routeProvider', function($routeProvider) {
+	angular.module('myApp', ['myApp.directives', 'myApp.controllers'], 
+	  function($routeProvider) {
+		$routeProvider.when('/home', {
+			templateUrl: 'js/partials/chart.html',
+			controller: 'mainController'
+		});
+
 		$routeProvider.when('/customers', {
 			templateUrl: 'js/partials/customers/main.html',
-			controller: 'mainController'
-		})
-
+			controller: 'customersController'
+		});
 
 		$routeProvider.when('/view1', {
 			templateUrl: 'js/partials/partial1.html',
@@ -16,7 +21,7 @@ define(['angular', 'app/main'], function(angular, app) {
 			templateUrl: 'js/partials/partial2.html',
 			controller: 'MyCtrl2',
 		});
-		$routeProvider.otherwise({redirectTo: '/customers'});
-	}]);
+		$routeProvider.otherwise({redirectTo: '/home'});
+	});
 
 });

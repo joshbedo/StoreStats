@@ -16,7 +16,7 @@ $accent: #fd9162;
 * { box-sizing: border-box; }
 body{ font-family: 'Open Sans', sans-serif; }
 .clear{ clear:both; }
-a{ text-decoration:none; }
+a{ text-decoration:none !important; }
 
 .btn{
 	border-radius:4px;
