@@ -1,1 +1,1 @@
-define(["jquery","angular","filters","services","directives","controllers"],function(e,t,n,r,i,s){return t.module("myApp",["myApp.controllers","myApp.filters","myApp.services","myApp.directives"])});
+define(["jquery","angular","controllers","filters","services","directives"],function(e,t,n,r,i,s){return t.module("myApp",["myApp.controllers","myApp.filters","myApp.services","myApp.directives"])});
