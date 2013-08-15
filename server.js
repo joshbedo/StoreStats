@@ -233,7 +233,7 @@ io.sockets.on('connection', function(socket){
     BarReport.findOne({id: data.id}, function(err, report){
       if(!err){
         //holy fuck this was a bitch fuck Mongoose and Schemas
-        var narr = [1, 2, 3];
+        var narr = [];
         report.series[0].data.forEach(function(el, index, array){
           if(index == 1){
             narr.push(el + 1);
