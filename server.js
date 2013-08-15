@@ -234,14 +234,13 @@ io.sockets.on('connection', function(socket){
       if(!err){
         //holy fuck this was a bitch fuck Mongoose and Schemas
         var narr = [1, 2, 3];
-        /*report.series[0].data.forEach(function(el, index, array){
+        report.series[0].data.forEach(function(el, index, array){
           if(index == 1){
             narr.push(el + 1);
           }else{
             narr.push(el);
           }
-        });*/
-        //report.series[0].data[1] = report.series[0].data[1] + 1;
+        });
         report.series[0].name = "Josh";
         report.series[0].data = narr;
         report.save(function(err){
